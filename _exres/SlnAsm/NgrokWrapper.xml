@@ -1,0 +1,104 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+NgrokWrapper
+</name>
+</assembly>
+<members>
+<member name="P:NgrokWrapper.IP">
+	<summary>
+ Forward ngrok to provided IP.
+ </summary>
+</member><member name="P:NgrokWrapper.Port">
+	<summary>
+ Forward ngrok to provided Port.
+ </summary>
+</member><member name="P:NgrokWrapper.Subdomain">
+	<summary>
+ Ngrok subdomain to be used. Only usable if authtoken is provided.
+ </summary>
+</member><member name="P:NgrokWrapper.AuthToken">
+	<summary>
+ Ngrok authtoken for premium ngrok user.
+ </summary>
+</member><member name="P:NgrokWrapper.Region">
+	<summary>
+ Ngrok region to be used. Default is using asia pacific.
+ </summary>
+</member><member name="P:NgrokWrapper.NgrokPort">
+	<summary>
+ Local Ngrok IP address. Default is 4040.
+ </summary>
+</member><member name="M:NgrokWrapper.StopNgrokInstances">
+	<summary>
+ Kill all ngrok instances.
+ </summary>
+</member><member name="P:Config.ConfigTunnel.Name">
+	<summary>
+ Identify the tunnel by name.
+ </summary>
+</member><member name="P:Config.ConfigTunnel.Proto">
+	<summary>
+ tunnel protocol name, one of http, tcp, tls.
+ </summary>
+</member><member name="P:Config.ConfigTunnel.Addr">
+	<summary>
+ forward traffic to this local port number or network address.
+ </summary>
+</member><member name="P:Config.ConfigTunnel.Inspect">
+	<summary>
+ enable http request inspection.
+ </summary>
+</member><member name="P:Config.ConfigTunnel.Auth">
+	<summary>
+ 	HTTP basic authentication credentials to enforce on tunneled requests.
+ </summary>
+</member><member name="P:Config.ConfigTunnel.Host_Header">
+	<summary>
+ Rewrite the HTTP Host header to this value, or preserve to leave it unchanged.
+ </summary>
+</member><member name="P:Config.ConfigTunnel.Bind_TLS">
+	<summary>
+ bind an HTTPS or HTTP endpoint or both true, false, or both.
+ </summary>
+</member><member name="P:Config.ConfigTunnel.Subdomain">
+	<summary>
+ subdomain name to request. If unspecified, uses the tunnel name.
+ </summary>
+</member><member name="P:Config.ConfigTunnel.HostName">
+	<summary>
+ hostname to request (requires reserved name and DNS CNAME).
+ </summary>
+</member><member name="P:Config.ConfigTunnel.CRT">
+	<summary>
+ PEM TLS certificate at this path to terminate TLS traffic before forwarding locally.
+ </summary>
+</member><member name="P:Config.ConfigTunnel.Key">
+	<summary>
+ PEM TLS private key at this path to terminate TLS traffic before forwarding locally.
+ </summary>
+</member><member name="P:Config.ConfigTunnel.Remote_Addr">
+	<summary>
+ bind the remote TCP port on the given address.
+ </summary>
+</member><member name="P:My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:My.Resources.Resources.ngrok">
+	<summary>
+  Looks up a localized resource of type System.Byte[].
+</summary>
+</member><member name="T:My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>

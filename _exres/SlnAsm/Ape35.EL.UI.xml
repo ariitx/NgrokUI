@@ -1,0 +1,721 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Ape35.EL.UI
+</name>
+</assembly>
+<members>
+<member name="F:Ape.EL.UI.Component.BaseDialog.MAX_WIDTH_FACTOR">
+	<summary>
+ Defines the maximum width for all BaseDialog instances in percent of the working area.
+ 
+ Allowed values are 0.2 - 1.0 where: 
+ 0.2 means:  The BaseDialog can be at most half as wide as the working area.
+ 1.0 means:  The BaseDialog can be as wide as the working area.
+ 
+ Default is: 70% of the working area width.
+ </summary>
+</member><member name="F:Ape.EL.UI.Component.BaseDialog.MAX_HEIGHT_FACTOR">
+	<summary>
+ Defines the maximum height for all BaseDialog instances in percent of the working area.
+ 
+ Allowed values are 0.2 - 1.0 where: 
+ 0.2 means:  The BaseDialog can be at most half as high as the working area.
+ 1.0 means:  The BaseDialog can be as high as the working area.
+ 
+ Default is: 90% of the working area height.
+ </summary>
+</member><member name="F:Ape.EL.UI.Component.BaseDialog.FONT_">
+	<summary>
+ Defines the font for all BaseDialog instances.
+ 
+ Default is: SystemFonts.MessageBoxFont
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.String)">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="text">The text.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.Windows.Forms.IWin32Window,System.String)">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="owner">The owner.</param>
+	<param name="text">The text.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.String,System.String)">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.Windows.Forms.IWin32Window,System.String,System.String)">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="owner">The owner.</param>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<param name="buttons">The buttons.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="owner">The owner.</param>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<param name="buttons">The buttons.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<param name="buttons">The buttons.</param>
+	<param name="icon">The icon.</param>
+	<returns></returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="owner">The owner.</param>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<param name="buttons">The buttons.</param>
+	<param name="icon">The icon.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<param name="buttons">The buttons.</param>
+	<param name="icon">The icon.</param>
+	<param name="defaultButton">The default button.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="owner">The owner.</param>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<param name="buttons">The buttons.</param>
+	<param name="icon">The icon.</param>
+	<param name="defaultButton">The default button.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.Keys[])">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<param name="buttons">The buttons.</param>
+	<param name="icon">The icon.</param>
+	<param name="keys">Suppressed keys.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.Keys[],System.Int32)">
+	<summary>
+	</summary>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<param name="buttons">The buttons.</param>
+	<param name="icon">The icon.</param>
+	<param name="keys">Suppressed keys.</param>
+	<param name="SoundFrequency">Sound frequency.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.Keys[],System.Int32,System.Int32)">
+	<summary>
+	</summary>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<param name="buttons">The buttons.</param>
+	<param name="icon">The icon.</param>
+	<param name="keys">Suppressed keys.</param>
+	<param name="SoundFrequency">Sound frequency.</param>
+	<param name="SoundDuration">Sound duration.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.Keys[],System.Int32,System.Int32,System.Int32)">
+	<summary>
+	</summary>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<param name="buttons">The buttons.</param>
+	<param name="icon">The icon.</param>
+	<param name="keys">Suppressed keys.</param>
+	<param name="SoundFrequency">Sound frequency.</param>
+	<param name="SoundDuration">Sound duration.</param>
+	<param name="intBeep">Number of beep.</param>
+	<returns>The dialog result.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.#ctor">
+	<summary>
+ Initializes a new instance of the <see cref="T:Ape.EL.UI.Component.BaseDialog"/> class.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.GetStringRows(System.String)">
+	<summary>
+ Gets the string rows.
+ </summary>
+	<param name="message">The message.</param>
+	<returns>The string rows as 1-dimensional array</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.GetButtonText(Ape.EL.UI.Component.BaseDialog.BUTTON_TEXT)">
+	<summary>
+ Gets the button text for the current language (if not german, english is used as default always)
+ </summary>
+	<param name="buttonTextIndex">Index of the button text.</param>
+	<returns>The button text</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.GetCorrectedWorkingAreaFactor(System.Double)">
+	<summary>
+ Ensure the given working area factor in the range of  0.2 - 1.0 where: 
+ 
+ 0.2 means:  Half as large as the working area.
+ 1.0 means:  As large as the working area.
+ </summary>
+	<param name="workingAreaFactor">The given working area factor.</param>
+	<returns>The corrected given working area factor.</returns>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.SetDialogStartPosition(Ape.EL.UI.Component.BaseDialog,System.Windows.Forms.IWin32Window)">
+	<summary>
+ Set the dialogs start position when given. 
+ Otherwise center the dialog on the current screen.
+ </summary>
+	<param name="BaseDialogForm">The BaseDialog dialog.</param>
+	<param name="owner">The owner.</param>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.SetDialogSizes(Ape.EL.UI.Component.BaseDialog,System.String,System.String)">
+	<summary>
+ Calculate the dialogs start size (Try to auto-size width to show longest text row).
+ Also set the maximum dialog size. 
+ </summary>
+	<param name="BaseDialogForm__1">The BaseDialog dialog.</param>
+	<param name="text">The text (the longest text row is used to calculate the dialog width).</param>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.SetDialogIcon(Ape.EL.UI.Component.BaseDialog,System.Windows.Forms.MessageBoxIcon)">
+	<summary>
+ Set the dialogs icon. 
+ When no icon is used: Correct placement and width of rich text box.
+ </summary>
+	<param name="BaseDialogForm">The BaseDialog dialog.</param>
+	<param name="icon">The MessageBoxIcon.</param>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.SetDialogButtons(Ape.EL.UI.Component.BaseDialog,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxDefaultButton)">
+	<summary>
+ Set dialog buttons visibilities and texts. 
+ Also set a default button.
+ </summary>
+	<param name="BaseDialogForm">The BaseDialog dialog.</param>
+	<param name="buttons">The buttons.</param>
+	<param name="defaultButton">The default button.</param>
+</member><member name="P:Ape.EL.UI.Component.BaseDialog.CaptionText">
+	<summary>
+ The text that is been used for the heading.
+ </summary>
+</member><member name="P:Ape.EL.UI.Component.BaseDialog.MessageText">
+	<summary>
+ The text that is been used in the BaseDialogForm.
+ </summary>
+</member><member name="P:Ape.EL.UI.Component.BaseDialog.UseTopMost">
+	<summary>
+ Gets or sets a value indicating whether the form should be displayed as a topmost form.
+ Static replacement for TopMost property.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseDialog.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.Keys[],System.Int32,System.Int32,System.Int32)">
+	<summary>
+ Shows the specified message box.
+ </summary>
+	<param name="owner">The owner.</param>
+	<param name="text">The text.</param>
+	<param name="caption">The caption.</param>
+	<param name="buttons">The buttons.</param>
+	<param name="icon">The icon.</param>
+	<param name="defaultButton">The default button.</param>
+	<param name="keySuppressed">Supressed Keys</param>
+	<returns>The dialog result.</returns>
+</member><member name="P:Ape.EL.UI.Component.WinFormDialog.TopMost">
+	<summary>
+ Get or set the message box to be always on top of everything else. This is useful when the messagebox is shown by a different thread. Value directly affect BaseDialog.UseTopMost property.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.WinFormDialog.SetMessageBoxForm">
+	<summary>
+ Set default messagebox form to be used in ExceptionErrorMsg, QuestionMsg, InformationMsg, and WarningMsg.
+ </summary>
+</member><member name="T:Ape.EL.UI.Component.WinFormDialog">
+	<summary>
+ Use this class's function SetMessageBoxForm to change Ape.EL.WinForm.General.MessageBoxForm to BaseDialog.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseForm.Initializer">
+	<summary>
+ Overridable routine which is called before performing other routines that is affected by BaseForm's properties (eg. UIUpdateStart).
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseForm.RefreshTabScheme">
+	<summary>
+ Update tab scheme to default.
+ </summary>
+</member><member name="F:Ape.EL.UI.Component.BaseForm.m_PreInit">
+	<summary>
+ Put any code that you think is very crucial before running any other code.
+ This will be execute once BaseForm is called out before other variable initiated or constructor.
+ </summary>
+</member><member name="P:Ape.EL.UI.Component.BaseForm.UseUIUpdate">
+	<summary>
+ Enable or disable UI Update feature which hide the form when loading in constructor and show it in Load event. Overrides Initializer to set the property.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseForm.UIUpdateStart">
+	<summary>
+ Must be called after initialize component in New constructor.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseForm.UIUpdateEnd">
+	<summary>
+ Must be called if UIUpdateStart was used. Otherwise screen will be hidden.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Ape.EL.UI.Component.BaseForm.DisableAutoScale">
+	<summary> Force form and any userccontrol's AutoScaleMode to None. </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseForm.PerformDisableAutoScale">
+	<summary> Force form and any userccontrol's AutoScaleMode to None. </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseForm.TurnOffFormLevelDoubleBuffering">
+	<summary>Use this on form shown.</summary>
+</member><member name="P:Ape.EL.UI.Component.BaseForm.IsFormLoaded">
+	<summary>
+ Indicate that Load event has been executed. This property is updated in Shown event.
+ </summary>
+</member><member name="T:Ape.EL.UI.Component.BaseForm">
+	<summary>
+ A customized base form with standardized functions.
+ Don't confuse with UI.DX's BaseForm.
+ They share some functions, but this one is lightweight.
+ Last updated on 12.11.2016.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.DrawingControl.SuspendChildren(System.Windows.Forms.Control)">
+	<summary>
+ Apply SuspendDrawing to Target and its children.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.DrawingControl.ResumeChildren(System.Windows.Forms.Control,System.Boolean)">
+	<summary>
+ Apply ResumeDrawing to Target and its children.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.DrawingControl.ResumeChildren(System.Windows.Forms.Control)">
+	<summary>
+ Apply ResumeDrawing to Target and its children.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.DrawingControl.HideFocusRectangle(System.Windows.Forms.Control)">
+	<summary>
+ Hide focused rectangle when user focus on the target control, only on XP Style.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.DrawingControl.ShowFocusRectangle(System.Windows.Forms.Control)">
+	<summary>
+ Show focused rectangle when user focus on the target control, only on XP Style.
+ </summary>
+</member><member name="P:Ape.EL.UI.Utility.FormLoader.LastLoadedModule">
+	<summary>
+ Get the last loaded module object.
+ </summary>
+</member><member name="P:Ape.EL.UI.Utility.FormLoader.SkippedPublicKeyToken">
+	<summary>
+ Contains list of assembly public key tokens to skip, so performance is increased when loading GlobalClassesFullName.
+ </summary>
+</member><member name="P:Ape.EL.UI.Utility.FormLoader.MyAssemblies">
+	<summary>
+ Contains list of assemblies to be loaded into GlobalClassesFullName. Leave empty to use all loaded assemblies.
+ </summary>
+</member><member name="P:Ape.EL.UI.Utility.FormLoader.MyOnStatusBusyShow">
+	<summary>
+ Get or set address of a routine to be called when loading form started.
+ </summary>
+</member><member name="P:Ape.EL.UI.Utility.FormLoader.MyOnStatusBusyHide">
+	<summary>
+ Get or set address of a routine to be called when loading form finished.
+ </summary>
+</member><member name="P:Ape.EL.UI.Utility.FormLoader.MyOnFormShowing">
+	<summary>
+ Get or set address of a routine to be called before form Show or ShowDialog is called.
+ </summary>
+</member><member name="P:Ape.EL.UI.Utility.FormLoader.MyOnFormShown">
+	<summary>
+ Get or set address of a routine to be called after form Show event is raised.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utility.FormLoader.LoadModule(System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+	<summary>
+ Try to load module from reflection.
+ </summary>
+	<param name="strFormName">FullName</param>
+	<remarks></remarks>
+</member><member name="M:Ape.EL.UI.Utility.FormLoader.LoadModule(System.Windows.Forms.Form,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+	<summary>
+ Load module from main screen.
+ </summary>
+	<param name="frm">The form to be shown.</param>
+	<param name="bFullScreen">False by default. Show the form in full screen mode.</param>
+	<param name="bNew">False by default. Show the form in a new mdi tab. If bFullScreen is true, this parameter will not take effect.</param>
+	<remarks></remarks>
+</member><member name="M:Ape.EL.UI.Utility.FormLoader.GlobalClassesFullName">
+	<summary>
+ Contains list of names of classes from loaded assemblies.
+ </summary>
+</member><member name="T:Ape.EL.UI.Utility.FormLoader">
+	<summary>
+ This class provides a utility to load forms from loaded assemblies.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Ape.EL.UI.Component.TabOrder.TabSchemeProvider.extendees">
+	<summary>
+ Hashtable to store the controls that use our extender property.
+ </summary>
+</member><member name="F:Ape.EL.UI.Component.TabOrder.TabSchemeProvider.topLevelForm">
+	<summary>
+ The form we're hosted on, which will be calculated by watching the extendees entering the control hierarchy.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.TabOrder.TabSchemeProvider.GetTabScheme(System.Windows.Forms.Control)">
+	<summary>
+ Get whether or not we're managing a given control.
+ </summary>
+	<param name="c"></param>
+	<returns></returns>
+</member><member name="M:Ape.EL.UI.Component.TabOrder.TabSchemeProvider.HookFormLoad">
+	<summary>
+ Hook up to the form load event and indicate that we've done so.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.TabOrder.TabSchemeProvider.UnhookFormLoad">
+	<summary>
+ Unhook from the form load event and indicate that we need to do so again before applying tab schemes.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.TabOrder.TabSchemeProvider.HookParentChangedEvents(System.Windows.Forms.Control)">
+	<summary>
+ Hook up to all of the parent changed events for this control and its ancestors so that we are informed
+ if and when they are added to the top-level form (whose load event we need).
+ It's not adequate to look at just the control, because it may have been added to its parent, but the parent
+ may not be descendent of the form -yet-.
+ </summary>
+	<param name="c"></param>
+</member><member name="M:Ape.EL.UI.Component.TabOrder.TabSchemeProvider.SetTabScheme(System.Windows.Forms.Control,Ape.EL.UI.Component.TabOrder.TabOrderManager.TabScheme)">
+	<summary>
+ Set the tab scheme to use on a given control.
+ </summary>
+	<param name="c"></param>
+	<return></return>
+</member><member name="M:Ape.EL.UI.Component.TabOrder.TabSchemeProvider.Extendee_ParentChanged(System.Object,System.EventArgs)">
+	<summary>
+ We track when each extendee's parent is changed, and also when their parents are changed, until
+ SOMEBODY finally changes their parent to the form, at which point we can hook the load to apply
+ the tab schemes.
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+</member><member name="T:Ape.EL.UI.Component.TabOrder.TabSchemeProvider">
+	<summary>
+ Wrap the TabOrderManager class and supply extendee controls with a custom tab scheme.
+ </summary>
+</member><member name="P:Ape.EL.UI.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Ape.EL.UI.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Ape.EL.UI.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:Ape.EL.UI.Component.TabOrder.TabOrderManager.TabSchemeComparer">
+	<summary>
+ Compare two controls in the selected tab scheme.
+ </summary>
+</member><member name="F:Ape.EL.UI.Component.TabOrder.TabOrderManager.container">
+	<summary>
+ The container whose tab order we manage.
+ </summary>
+</member><member name="F:Ape.EL.UI.Component.TabOrder.TabOrderManager.schemeOverrides">
+	<summary>
+ Hash of controls to schemes so that individual containers can have different ordering
+ strategies than their parents.
+ </summary>
+</member><member name="F:Ape.EL.UI.Component.TabOrder.TabOrderManager.curTabIndex">
+	<summary>
+ The tab index we start numbering from when the tab order is applied.
+ </summary>
+</member><member name="T:Ape.EL.UI.Component.TabOrder.TabOrderManager.TabScheme">
+	<summary>
+ The general tab-ordering strategy (i.e. whether we tab across rows first, or down columns).
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.TabOrder.TabOrderManager.#ctor(System.Windows.Forms.Control)">
+	<summary>
+ Constructor.
+ </summary>
+	<param name="container">The container whose tab order we manage.</param>
+</member><member name="M:Ape.EL.UI.Component.TabOrder.TabOrderManager.#ctor(System.Windows.Forms.Control,System.Int32,System.Collections.Hashtable)">
+	<summary>
+ Construct a tab order manager that starts numbering at the given tab index.
+ </summary>
+	<param name="container">The container whose tab order we manage.</param>
+	<param name="curTabIndex">Where to start numbering.</param>
+	<param name="schemeOverrides">List of controls with explicitly defined schemes.</param>
+</member><member name="M:Ape.EL.UI.Component.TabOrder.TabOrderManager.SetSchemeForControl(System.Windows.Forms.Control,Ape.EL.UI.Component.TabOrder.TabOrderManager.TabScheme)">
+	<summary>
+ Explicitly set a tab order scheme for a given (presumably container) control.
+ </summary>
+	<param name="c">The control to set the scheme for.</param>
+	<param name="scheme">The requested scheme.</param>
+</member><member name="M:Ape.EL.UI.Component.TabOrder.TabOrderManager.SetTabOrder(Ape.EL.UI.Component.TabOrder.TabOrderManager.TabScheme)">
+	<summary>
+ Recursively set the tab order on this container and all of its children.
+ </summary>
+	<param name="scheme">The tab ordering strategy to apply.</param>
+	<returns>The next tab index to be used.</returns>
+</member><member name="T:Ape.EL.UI.Component.TabOrder.TabOrderManager">
+	<summary>
+ Dynamically determine and set a tab order for a container and children according to a given strategy.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.ControlUtils.DefaultDrawEmptyForeground(System.Windows.Forms.PaintEventArgs,System.String)">
+	<summary>
+ Draw string in middle of control (eg. put on Paint event in form or panel).
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.TextBoxUtils.ReadOnlyTextBox(System.Windows.Forms.TextBox,System.Boolean)">
+	<summary>
+ Hide caret when focused to textbox. Set to readonly.
+ </summary>
+</member><member name="T:Ape.EL.UI.Component.Misc.DatabaseControl.ctlSize">
+	<summary>
+ A class to remember the initial controls' sizes.
+ </summary>
+</member><member name="P:Ape.EL.UI.Component.Misc.DatabaseControl.ConnectButton">
+	<summary>
+ Set connect button, which can be triggered when enter key is pressed on available textboxes.
+ </summary>
+</member><member name="P:Ape.EL.UI.Component.Misc.DatabaseControl.MyConnectionInfo">
+	<summary>
+ Extract ConnectionInfo from control.
+ </summary>
+</member><member name="P:Ape.EL.UI.Component.Misc.DatabaseControl.Catalogue">
+	<summary>
+ Set default catalogue using this property.
+ </summary>
+</member><member name="P:Ape.EL.UI.Component.Misc.DatabaseControl.OptionsEditable">
+	<summary>
+ Set value to enable changing the selected ConnectionInfo's details.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.Misc.DatabaseControl.ClearConnectionInfo">
+	<summary>
+ Clear connection info from UI.
+ </summary>
+</member><member name="E:Ape.EL.UI.Component.BaseUserControl.DialogShowing">
+	<summary> Occurs before ShowDialog is showing the dialog form.</summary>
+</member><member name="E:Ape.EL.UI.Component.BaseUserControl.DialogClosed">
+	<summary> Occurs after ShowDialog is closed and before returning result. </summary>
+</member><member name="E:Ape.EL.UI.Component.BaseUserControl.Shown">
+	<summary> Occurs when ShowDialog Shown event is raised. </summary>
+</member><member name="P:Ape.EL.UI.Component.BaseUserControl.IsControlLoaded">
+	<summary>
+ Indicate that Load event has been executed. This property is updated in Load event.
+ </summary>
+</member><member name="P:Ape.EL.UI.Component.BaseUserControl.IsOnTestContainer">
+	<summary>
+ Determine whether the control is used on test container.
+ </summary>
+</member><member name="P:Ape.EL.UI.Component.BaseUserControl.Caption">
+	<summary>
+ Get or set the title text for DialogShow's form.
+ </summary>
+</member><member name="P:Ape.EL.UI.Component.BaseUserControl.KeyPreview">
+	<summary> Gets or sets a value indicating whether the form will receive key events before the event is passed to the control that has focus. </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseUserControl.ProcessKeyPreview(System.Windows.Forms.Message@)">
+	<summary> 
+ Trap any keypress before child controls get hold of them.
+ </summary>
+	<param name="m">Windows message</param>
+	<returns>True if the keypress is handled</returns>
+</member><member name="P:Ape.EL.UI.Component.BaseUserControl.DisableResizing">
+	<summary>
+ Disable resizing of user control by setting its MaximumSize and MinimumSize property to its base Size.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseUserControl.ShowDialog(System.Windows.Forms.Form,System.Windows.Forms.DialogResult,System.Windows.Forms.IWin32Window,System.String,System.Boolean)">
+	<summary>
+ Prompt a dialog form with the control docked to return DialogResult.
+ </summary>
+	<param name="ContainerForm"></param>
+	<param name="owner">Set container form's owner.</param>
+	<param name="ContainerTitle">Set container form's Text if ContainerForm is nothing. Caption property will be used if ContainerTitle is empty.</param>
+	<param name="IsResizableForm">Set whether the container form should resizable if ContainerForm is nothing.</param>
+</member><member name="M:Ape.EL.UI.Component.BaseUserControl.ShowDialog(System.Windows.Forms.IWin32Window,System.String,System.Boolean)">
+	<summary>
+ Prompt a dialog form with the control docked to return DialogResult.
+ </summary>
+	<param name="owner">Set container form's owner.</param>
+	<param name="ContainerTitle">Set container form's Text if ContainerForm is nothing. Caption property will be used if ContainerTitle is empty.</param>
+	<param name="IsResizableForm">Set whether the container form should resizable if ContainerForm is nothing.</param>
+</member><member name="P:Ape.EL.UI.Component.BaseUserControl.CancelButton">
+	<summary>
+ Cancel button will be used in ShowDialog's CancelButton property.
+ </summary>
+</member><member name="M:Ape.EL.UI.Component.BaseUserControl.RefreshTabScheme">
+	<summary>
+ Update tab scheme to default.
+ </summary>
+</member><member name="T:Ape.EL.UI.Component.BaseUserControl">
+	<summary>
+ A customized base user control with standardized functions.
+ Don't confuse with UI.DX's BaseUserControl.
+ They share some functions, but this one is lightweight.
+ Last updated on 12.11.2016.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.FormMemory.SaveSize">
+	<summary>
+ Save keyboard size.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.FormMemory.SaveLocation">
+	<summary>
+ Save keyboard position.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.FormMemory.LoadSizeAndLocation">
+	<summary>
+ Put in shown or load.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.FormMemory.SaveState">
+	<summary>
+ Save last windowstate.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.FormMemory.LoadWindowState">
+	<summary>
+ Put in shown or load.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.FormMemory.#ctor(System.Windows.Forms.Form@,System.String,System.Boolean,System.Boolean)">
+	<summary>
+ Remember the last form location and position based on RememberSizePos, saving / restoring the windowstate based on RememberState.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.FormMemory.#ctor(System.Windows.Forms.Form@,System.String)">
+	<summary>
+ Remember the last form location and position only, not saving / restoring the windowstate.
+ </summary>
+</member><member name="M:Ape.EL.UI.Utils.FormMemory.#ctor(System.Windows.Forms.Form@)">
+	<summary>
+ Remember the last form location and position only, not saving / restoring the windowstate. ID is automatically generated.
+ </summary>
+</member><member name="T:Ape.EL.UI.Utils.FormMemory">
+	<summary>
+ A class that able to remember your form's last position and size.
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Ape.EL.UI.Extensions.UIExtensions.DefaultRequiredBackColour">
+	<summary>Colour to be used as background colour. </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.SetBackColorRequired(System.Windows.Forms.Control)">
+	<summary>
+ Change BackColor to a DefaultRequiredBackColor / mandatory field colour.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.Clear(System.Windows.Forms.Control.ControlCollection,System.Boolean)">
+	<summary>
+ Dispose the collection items when clearing.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.Clear``1(System.Collections.Generic.List{``0},System.Boolean)">
+	<summary>
+ Dispose the collection items when clearing.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.SuspendDrawing(System.Windows.Forms.Control)">
+	<summary>
+ Force suspend layout.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.ResumeDrawing(System.Windows.Forms.Control)">
+	<summary>
+ Force resume layout.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.ResumeDrawing(System.Windows.Forms.Control,System.Boolean)">
+	<summary>
+ Force resume layout.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.ResumeChildren(System.Windows.Forms.Control,System.Boolean)">
+	<summary>
+ Force resume layout on Target and children.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.ResumeChildren(System.Windows.Forms.Control)">
+	<summary>
+ Force resume layout on Target and children.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.SuspendChildren(System.Windows.Forms.Control)">
+	<summary>
+ Force suspend layout on Target and children.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.HideFocusRectangle(System.Windows.Forms.Control)">
+	<summary>
+ Hide marquee rectangle on control when focused, only on XP Style.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.ShowFocusRectangle(System.Windows.Forms.Control)">
+	<summary>
+ Show marquee rectangle on control when focused, only on XP Style.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.SetDoubleBuffering(System.Windows.Forms.Control,System.Boolean)">
+	<summary>
+ Set double buffering.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.VisibleSelf(System.Windows.Forms.Control)">
+	<summary>
+ Check for control's true visibility (through reflection) without the manipulation from parent or owner.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.VisibleSelf(System.Windows.Forms.Control@,System.Boolean)">
+	<summary>
+ Set for control's true visibility (through reflection) without the manipulation from parent or owner.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.IsInDesignMode(System.Windows.Forms.Control)">
+	<summary>
+ Extension method to return if the control is in design mode.
+ </summary>
+	<param name="control">Control to examine</param>
+	<returns>True if in design mode, otherwise false</returns>
+	<remarks>https://www.codeproject.com/tips/447319/resolve-designmode-for-a-user-control</remarks>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.ResolveDesignMode(System.Windows.Forms.Control)">
+	<summary>
+ Method to test if the control or it's parent is in design mode.
+ </summary>
+	<param name="control">Control to examine</param>
+	<returns>True if in design mode, otherwise false</returns>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.FindCtl``1(``0)">
+	<summary>
+ Get all controls and components out of a control container through reflection.
+ This is enhanced function of WinForm.General.FindAllControls.
+ Be careful of performance slow down!
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.TrueFindCtl(System.Object,System.Collections.Generic.IList{System.Object})">
+	<summary>
+ Populate controls and components to a list of object.
+ Internal use by FindCtl(Of T)
+ Forms within container form will be ignored.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.GridPointCollector(System.Windows.Forms.Control,System.Int32)">
+	<summary>
+ Plot a grid with total number of points. Points are pointed on screen.
+ </summary>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.IsControlVisibleToUser(System.Windows.Forms.Control)">
+	<summary>
+ Checks if a control is actually visible to the user completely.
+ http://stackoverflow.com/a/16760756
+ Check more on https://stackoverflow.com/questions/34025833/given-a-hwnd-determine-if-that-window-is-not-hidden-by-other-windows-z-orderin
+ </summary>
+	<param name="control">The control to check.</param>
+	<returns>True, if the control is completely visible, false else.</returns>
+	<remarks>This is not 100% accurate.</remarks>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.IsControlVisibleToProgram(System.Windows.Forms.Control)">
+	<summary>
+ Same as IsControlVisibleToUser, but only to forms that are created from main program.
+ </summary>
+	<returns>True, if the control is completely visible, false else.</returns>
+</member><member name="M:Ape.EL.UI.Extensions.UIExtensions.FrontMost(System.Windows.Forms.Form,System.Boolean)">
+	<summary>
+ Allow form to stay in front of other main program's visible forms.
+ Like TopMost, but only on top of main program's forms.
+ Experimental function, use with caution.
+ </summary>
+</member><member name="T:Ape.EL.UI.Extensions.UIExtensions">
+	<summary>
+ This is an extensions module. Contains extensions for UI related instance. Eg. Control type.
+ Last modify on 19 May 2016 - Ari
+ </summary>
+</member>
+</members>
+</doc>

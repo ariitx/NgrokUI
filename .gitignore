@@ -1,0 +1,26 @@
+# Ignore everything
+.hg/*
+.hgignore
+*/bin/*
+*/obj/
+
+*.rar
+*.zip
+*.git
+
+*.ignore
+Thumbs.db
+*.suo
+*.licx
+*.vbproj.user
+
+packages/*
+WEBAPI/*
+WEB/*
+WEBD/*
+~*.docx
+*.pubxml.user
+*.vbw
+
+__Release/*
+_InnoSetup/Output/*

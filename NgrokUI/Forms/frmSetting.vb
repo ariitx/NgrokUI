@@ -82,6 +82,7 @@ Class frmSetting
         txtNgrokSubdomain.Text = config.NgrokSubdomain
         txtNgrokAuthToken.Text = config.NgrokAuthToken
         txtNgrokPort.Text = config.NgrokPort
+        cbNgrokUseSSL.Checked = config.NgrokUseSSL
         cbDebug.Checked = config.Debug
         txtModuleProcessInterval.Text = config.ModuleProcessInterval
         txtCheckConnectionInterval.Text = config.CheckConnectionInterval
@@ -112,6 +113,7 @@ Class frmSetting
         config.NgrokSubdomain = txtNgrokSubdomain.Text
         config.NgrokAuthToken = txtNgrokAuthToken.Text
         config.NgrokPort = txtNgrokPort.Text.ToInt32
+        config.NgrokUseSSL = cbNgrokUseSSL.Checked
         config.Debug = cbDebug.Checked
         config.ModuleProcessInterval = txtModuleProcessInterval.Text.ToInt32
         config.CheckConnectionInterval = txtCheckConnectionInterval.Text.ToInt32
@@ -217,7 +219,7 @@ Class frmSetting
     End Sub
 
     Private Sub btnProfilesDelete_Click(sender As Object, e As EventArgs) Handles btnProfilesDelete.Click
-        If QuestionMsg("Delete selectd profile?") = Windows.Forms.DialogResult.Yes Then DeleteSelectedProfile()
+        If QuestionMsg("Delete selected profile?") = Windows.Forms.DialogResult.Yes Then DeleteSelectedProfile()
     End Sub
 
     Private Sub btnProfilesSave_Click(sender As Object, e As EventArgs) Handles btnProfilesSave.Click
@@ -231,5 +233,9 @@ Class frmSetting
 
     Private Sub cbUrlAutoIP_CheckedChanged(sender As Object, e As EventArgs) Handles cbUrlAutoIP.CheckedChanged
         txtUrl.Enabled = Not cbUrlAutoIP.Checked
+    End Sub
+
+    Private Sub cbWebApiSelfHost_CheckedChanged(sender As Object, e As EventArgs) Handles cbWebApiSelfHost.CheckedChanged
+        txtWebApiDir.Enabled = Not cbWebApiSelfHost.Checked
     End Sub
 End Class

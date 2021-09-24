@@ -20,7 +20,7 @@ Public Class ConfigStructure
             End If
         End Set
     End Property
-    Private _GeneralAutoRestartHourInterval As Integer = 3 'in hours
+    Private _GeneralAutoRestartHourInterval As Integer = 1 'in hours
 
     Property WebApiPort As Integer = 80
     Property WebApiSelfHost As Boolean = False
@@ -65,6 +65,7 @@ Public Class ConfigStructure
     End Property
 
     Property NgrokPort As Integer = 4040
+    Property NgrokUseSSL As Boolean = False
     Public ReadOnly NgrokRandomPort As Boolean = True 'not used
     Property NgrokSubdomain As String = ""
     Property NgrokAuthToken As String = ""

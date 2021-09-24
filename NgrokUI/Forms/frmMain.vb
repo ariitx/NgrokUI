@@ -415,6 +415,7 @@ Class frmMain
                 nw.AuthToken = m_Config.NgrokAuthToken
                 nw.Subdomain = m_Config.NgrokSubdomain
                 nw.NgrokPort = m_Config.NgrokPort
+                nw.UseTLS = m_Config.NgrokUseSSL
                 AddHandler nw.Reply, Sub(str As String)
                                          If m_Config.Debug Then WriteLog("NgrokWrapper > " & str)
                                      End Sub

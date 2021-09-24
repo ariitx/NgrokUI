@@ -45,6 +45,7 @@ Partial Class frmSetting
         Me.txtUrlPort = New System.Windows.Forms.TextBox()
         Me.lbAutoRestart = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.cbNgrokUseSSL = New System.Windows.Forms.CheckBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.tabControlSetting = New System.Windows.Forms.TabControl()
         Me.tabpageGeneral = New System.Windows.Forms.TabPage()
@@ -53,14 +54,14 @@ Partial Class frmSetting
         Me.cbAutoRestart = New System.Windows.Forms.CheckBox()
         Me.txtWebApiDir = New System.Windows.Forms.TextBox()
         Me.lbWebApiDir = New System.Windows.Forms.Label()
-        Me.lbNgrokPort = New System.Windows.Forms.Label()
-        Me.txtNgrokPort = New System.Windows.Forms.TextBox()
         Me.tabpageURL = New System.Windows.Forms.TabPage()
         Me.cbUrlAutoIP = New System.Windows.Forms.CheckBox()
         Me.lbUriInfo = New System.Windows.Forms.Label()
         Me.txtUrl = New System.Windows.Forms.TextBox()
         Me.lbUrl = New System.Windows.Forms.Label()
         Me.tabpageNgrok = New System.Windows.Forms.TabPage()
+        Me.lbNgrokPort = New System.Windows.Forms.Label()
+        Me.txtNgrokPort = New System.Windows.Forms.TextBox()
         Me.lblNgrokInfo = New System.Windows.Forms.Label()
         Me.txtNgrokAuthToken = New System.Windows.Forms.TextBox()
         Me.lblNgrokAuthToken = New System.Windows.Forms.Label()
@@ -116,7 +117,7 @@ Partial Class frmSetting
         '
         'lbWebApiPort
         '
-        Me.lbWebApiPort.Location = New System.Drawing.Point(10, 44)
+        Me.lbWebApiPort.Location = New System.Drawing.Point(10, 9)
         Me.lbWebApiPort.Name = "lbWebApiPort"
         Me.lbWebApiPort.Size = New System.Drawing.Size(100, 23)
         Me.lbWebApiPort.TabIndex = 0
@@ -125,7 +126,7 @@ Partial Class frmSetting
         'txtWebApiPort
         '
         Me.txtWebApiPort.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtWebApiPort.Location = New System.Drawing.Point(136, 41)
+        Me.txtWebApiPort.Location = New System.Drawing.Point(136, 6)
         Me.txtWebApiPort.MaxLength = 5
         Me.txtWebApiPort.Name = "txtWebApiPort"
         Me.txtWebApiPort.Size = New System.Drawing.Size(150, 24)
@@ -195,7 +196,7 @@ Partial Class frmSetting
         'cbWebApiSelfHost
         '
         Me.cbWebApiSelfHost.AutoSize = True
-        Me.cbWebApiSelfHost.Location = New System.Drawing.Point(292, 41)
+        Me.cbWebApiSelfHost.Location = New System.Drawing.Point(292, 6)
         Me.cbWebApiSelfHost.Name = "cbWebApiSelfHost"
         Me.cbWebApiSelfHost.Size = New System.Drawing.Size(88, 22)
         Me.cbWebApiSelfHost.TabIndex = 7
@@ -283,7 +284,7 @@ Partial Class frmSetting
         '
         'txtUrlPort
         '
-        Me.txtUrlPort.Location = New System.Drawing.Point(115, 36)
+        Me.txtUrlPort.Location = New System.Drawing.Point(136, 36)
         Me.txtUrlPort.Name = "txtUrlPort"
         Me.txtUrlPort.Size = New System.Drawing.Size(200, 24)
         Me.txtUrlPort.TabIndex = 11
@@ -292,7 +293,7 @@ Partial Class frmSetting
         'lbAutoRestart
         '
         Me.lbAutoRestart.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.lbAutoRestart.Location = New System.Drawing.Point(11, 103)
+        Me.lbAutoRestart.Location = New System.Drawing.Point(10, 68)
         Me.lbAutoRestart.Name = "lbAutoRestart"
         Me.lbAutoRestart.Size = New System.Drawing.Size(100, 23)
         Me.lbAutoRestart.TabIndex = 22
@@ -303,13 +304,24 @@ Partial Class frmSetting
         '
         'Label1
         '
-        Me.Label1.Location = New System.Drawing.Point(9, 37)
+        Me.Label1.Location = New System.Drawing.Point(10, 37)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(100, 23)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Port"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.myToolTip.SetToolTip(Me.Label1, "Public port used for port forwarding from router.")
+        '
+        'cbNgrokUseSSL
+        '
+        Me.cbNgrokUseSSL.AutoSize = True
+        Me.cbNgrokUseSSL.Location = New System.Drawing.Point(292, 8)
+        Me.cbNgrokUseSSL.Name = "cbNgrokUseSSL"
+        Me.cbNgrokUseSSL.Size = New System.Drawing.Size(86, 22)
+        Me.cbNgrokUseSSL.TabIndex = 27
+        Me.cbNgrokUseSSL.Text = "Use SSL"
+        Me.myToolTip.SetToolTip(Me.cbNgrokUseSSL, "Use HTTPS connection when using ngrok")
+        Me.cbNgrokUseSSL.UseVisualStyleBackColor = True
         '
         'btnCancel
         '
@@ -352,8 +364,6 @@ Partial Class frmSetting
         Me.tabpageGeneral.Controls.Add(Me.cbWebApiSelfHost)
         Me.tabpageGeneral.Controls.Add(Me.txtWebApiPort)
         Me.tabpageGeneral.Controls.Add(Me.lbWebApiPort)
-        Me.tabpageGeneral.Controls.Add(Me.lbNgrokPort)
-        Me.tabpageGeneral.Controls.Add(Me.txtNgrokPort)
         Me.tabpageGeneral.Location = New System.Drawing.Point(4, 34)
         Me.tabpageGeneral.Name = "tabpageGeneral"
         Me.tabpageGeneral.Padding = New System.Windows.Forms.Padding(3)
@@ -365,7 +375,7 @@ Partial Class frmSetting
         'lbAutoRestartInterval
         '
         Me.lbAutoRestartInterval.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
-        Me.lbAutoRestartInterval.Location = New System.Drawing.Point(210, 103)
+        Me.lbAutoRestartInterval.Location = New System.Drawing.Point(210, 68)
         Me.lbAutoRestartInterval.Name = "lbAutoRestartInterval"
         Me.lbAutoRestartInterval.Size = New System.Drawing.Size(100, 23)
         Me.lbAutoRestartInterval.TabIndex = 25
@@ -374,7 +384,7 @@ Partial Class frmSetting
         '
         'txtAutoRestartInterval
         '
-        Me.txtAutoRestartInterval.Location = New System.Drawing.Point(136, 103)
+        Me.txtAutoRestartInterval.Location = New System.Drawing.Point(136, 68)
         Me.txtAutoRestartInterval.Name = "txtAutoRestartInterval"
         Me.txtAutoRestartInterval.Size = New System.Drawing.Size(68, 24)
         Me.txtAutoRestartInterval.TabIndex = 24
@@ -382,7 +392,7 @@ Partial Class frmSetting
         'cbAutoRestart
         '
         Me.cbAutoRestart.AutoSize = True
-        Me.cbAutoRestart.Location = New System.Drawing.Point(115, 109)
+        Me.cbAutoRestart.Location = New System.Drawing.Point(115, 74)
         Me.cbAutoRestart.Name = "cbAutoRestart"
         Me.cbAutoRestart.Size = New System.Drawing.Size(15, 14)
         Me.cbAutoRestart.TabIndex = 23
@@ -390,35 +400,18 @@ Partial Class frmSetting
         '
         'txtWebApiDir
         '
-        Me.txtWebApiDir.Location = New System.Drawing.Point(136, 71)
+        Me.txtWebApiDir.Location = New System.Drawing.Point(136, 36)
         Me.txtWebApiDir.Name = "txtWebApiDir"
         Me.txtWebApiDir.Size = New System.Drawing.Size(200, 24)
         Me.txtWebApiDir.TabIndex = 6
         '
         'lbWebApiDir
         '
-        Me.lbWebApiDir.Location = New System.Drawing.Point(10, 74)
+        Me.lbWebApiDir.Location = New System.Drawing.Point(10, 39)
         Me.lbWebApiDir.Name = "lbWebApiDir"
         Me.lbWebApiDir.Size = New System.Drawing.Size(100, 23)
         Me.lbWebApiDir.TabIndex = 5
         Me.lbWebApiDir.Text = "Website Dir"
-        '
-        'lbNgrokPort
-        '
-        Me.lbNgrokPort.Location = New System.Drawing.Point(10, 12)
-        Me.lbNgrokPort.Name = "lbNgrokPort"
-        Me.lbNgrokPort.Size = New System.Drawing.Size(100, 23)
-        Me.lbNgrokPort.TabIndex = 5
-        Me.lbNgrokPort.Text = "Ngrok Port"
-        '
-        'txtNgrokPort
-        '
-        Me.txtNgrokPort.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtNgrokPort.Location = New System.Drawing.Point(136, 9)
-        Me.txtNgrokPort.MaxLength = 5
-        Me.txtNgrokPort.Name = "txtNgrokPort"
-        Me.txtNgrokPort.Size = New System.Drawing.Size(150, 24)
-        Me.txtNgrokPort.TabIndex = 6
         '
         'tabpageURL
         '
@@ -439,7 +432,7 @@ Partial Class frmSetting
         'cbUrlAutoIP
         '
         Me.cbUrlAutoIP.AutoSize = True
-        Me.cbUrlAutoIP.Location = New System.Drawing.Point(321, 8)
+        Me.cbUrlAutoIP.Location = New System.Drawing.Point(342, 8)
         Me.cbUrlAutoIP.Name = "cbUrlAutoIP"
         Me.cbUrlAutoIP.Size = New System.Drawing.Size(74, 22)
         Me.cbUrlAutoIP.TabIndex = 10
@@ -448,9 +441,9 @@ Partial Class frmSetting
         '
         'lbUriInfo
         '
-        Me.lbUriInfo.Location = New System.Drawing.Point(9, 63)
+        Me.lbUriInfo.Location = New System.Drawing.Point(10, 66)
         Me.lbUriInfo.Name = "lbUriInfo"
-        Me.lbUriInfo.Size = New System.Drawing.Size(306, 116)
+        Me.lbUriInfo.Size = New System.Drawing.Size(306, 110)
         Me.lbUriInfo.TabIndex = 9
         Me.lbUriInfo.Text = "Note: If your router is allowed to set port forwarding, you can set the static UR" &
     "L on Custom URL above." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Leave blank and tick ""Auto IP"" to use system generated" &
@@ -458,14 +451,14 @@ Partial Class frmSetting
         '
         'txtUrl
         '
-        Me.txtUrl.Location = New System.Drawing.Point(115, 6)
+        Me.txtUrl.Location = New System.Drawing.Point(136, 6)
         Me.txtUrl.Name = "txtUrl"
         Me.txtUrl.Size = New System.Drawing.Size(200, 24)
         Me.txtUrl.TabIndex = 8
         '
         'lbUrl
         '
-        Me.lbUrl.Location = New System.Drawing.Point(9, 9)
+        Me.lbUrl.Location = New System.Drawing.Point(10, 9)
         Me.lbUrl.Name = "lbUrl"
         Me.lbUrl.Size = New System.Drawing.Size(100, 23)
         Me.lbUrl.TabIndex = 7
@@ -474,6 +467,9 @@ Partial Class frmSetting
         '
         'tabpageNgrok
         '
+        Me.tabpageNgrok.Controls.Add(Me.cbNgrokUseSSL)
+        Me.tabpageNgrok.Controls.Add(Me.lbNgrokPort)
+        Me.tabpageNgrok.Controls.Add(Me.txtNgrokPort)
         Me.tabpageNgrok.Controls.Add(Me.lblNgrokInfo)
         Me.tabpageNgrok.Controls.Add(Me.txtNgrokAuthToken)
         Me.tabpageNgrok.Controls.Add(Me.lblNgrokAuthToken)
@@ -484,50 +480,67 @@ Partial Class frmSetting
         Me.tabpageNgrok.Padding = New System.Windows.Forms.Padding(3)
         Me.tabpageNgrok.Size = New System.Drawing.Size(418, 187)
         Me.tabpageNgrok.TabIndex = 7
-        Me.tabpageNgrok.Text = "ngrok"
+        Me.tabpageNgrok.Text = "Ngrok"
         Me.tabpageNgrok.UseVisualStyleBackColor = True
+        '
+        'lbNgrokPort
+        '
+        Me.lbNgrokPort.Location = New System.Drawing.Point(10, 9)
+        Me.lbNgrokPort.Name = "lbNgrokPort"
+        Me.lbNgrokPort.Size = New System.Drawing.Size(100, 23)
+        Me.lbNgrokPort.TabIndex = 5
+        Me.lbNgrokPort.Text = "Ngrok Port"
+        '
+        'txtNgrokPort
+        '
+        Me.txtNgrokPort.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtNgrokPort.Location = New System.Drawing.Point(136, 6)
+        Me.txtNgrokPort.MaxLength = 5
+        Me.txtNgrokPort.Name = "txtNgrokPort"
+        Me.txtNgrokPort.Size = New System.Drawing.Size(150, 24)
+        Me.txtNgrokPort.TabIndex = 6
         '
         'lblNgrokInfo
         '
-        Me.lblNgrokInfo.Location = New System.Drawing.Point(9, 66)
+        Me.lblNgrokInfo.Location = New System.Drawing.Point(10, 96)
         Me.lblNgrokInfo.Name = "lblNgrokInfo"
-        Me.lblNgrokInfo.Size = New System.Drawing.Size(306, 118)
+        Me.lblNgrokInfo.Size = New System.Drawing.Size(306, 82)
         Me.lblNgrokInfo.TabIndex = 3
         Me.lblNgrokInfo.Text = "Note: If you have ngrok paid plan, you can set your subdomain and auth token in t" &
     "his page." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Leave blank to use default setting."
         '
         'txtNgrokAuthToken
         '
-        Me.txtNgrokAuthToken.Location = New System.Drawing.Point(115, 6)
+        Me.txtNgrokAuthToken.Location = New System.Drawing.Point(136, 35)
         Me.txtNgrokAuthToken.Name = "txtNgrokAuthToken"
         Me.txtNgrokAuthToken.Size = New System.Drawing.Size(200, 24)
         Me.txtNgrokAuthToken.TabIndex = 1
         '
         'lblNgrokAuthToken
         '
-        Me.lblNgrokAuthToken.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNgrokAuthToken.Location = New System.Drawing.Point(9, 9)
+        Me.lblNgrokAuthToken.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.lblNgrokAuthToken.Location = New System.Drawing.Point(10, 38)
         Me.lblNgrokAuthToken.Name = "lblNgrokAuthToken"
         Me.lblNgrokAuthToken.Size = New System.Drawing.Size(100, 23)
         Me.lblNgrokAuthToken.TabIndex = 0
-        Me.lblNgrokAuthToken.Text = "ngrok Auth Token"
+        Me.lblNgrokAuthToken.Text = "Ngrok Auth Token"
         Me.lblNgrokAuthToken.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'txtNgrokSubdomain
         '
-        Me.txtNgrokSubdomain.Location = New System.Drawing.Point(115, 36)
+        Me.txtNgrokSubdomain.Location = New System.Drawing.Point(136, 65)
         Me.txtNgrokSubdomain.Name = "txtNgrokSubdomain"
         Me.txtNgrokSubdomain.Size = New System.Drawing.Size(200, 24)
         Me.txtNgrokSubdomain.TabIndex = 2
         '
         'lblNgrokSubdomain
         '
-        Me.lblNgrokSubdomain.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNgrokSubdomain.Location = New System.Drawing.Point(9, 37)
+        Me.lblNgrokSubdomain.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!)
+        Me.lblNgrokSubdomain.Location = New System.Drawing.Point(10, 66)
         Me.lblNgrokSubdomain.Name = "lblNgrokSubdomain"
         Me.lblNgrokSubdomain.Size = New System.Drawing.Size(100, 23)
         Me.lblNgrokSubdomain.TabIndex = 0
-        Me.lblNgrokSubdomain.Text = "ngrok Subdomain"
+        Me.lblNgrokSubdomain.Text = "Ngrok Subdomain"
         Me.lblNgrokSubdomain.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'tabpageErrorEmail
@@ -555,7 +568,7 @@ Partial Class frmSetting
         '
         'sbTestEmail
         '
-        Me.sbTestEmail.Location = New System.Drawing.Point(321, 138)
+        Me.sbTestEmail.Location = New System.Drawing.Point(342, 138)
         Me.sbTestEmail.Name = "sbTestEmail"
         Me.sbTestEmail.Size = New System.Drawing.Size(59, 43)
         Me.sbTestEmail.TabIndex = 16
@@ -563,14 +576,14 @@ Partial Class frmSetting
         '
         'txtErrReceipient
         '
-        Me.txtErrReceipient.Location = New System.Drawing.Point(115, 156)
+        Me.txtErrReceipient.Location = New System.Drawing.Point(136, 156)
         Me.txtErrReceipient.Name = "txtErrReceipient"
         Me.txtErrReceipient.Size = New System.Drawing.Size(200, 24)
         Me.txtErrReceipient.TabIndex = 15
         '
         'lbErrEmail
         '
-        Me.lbErrEmail.Location = New System.Drawing.Point(9, 9)
+        Me.lbErrEmail.Location = New System.Drawing.Point(10, 9)
         Me.lbErrEmail.Name = "lbErrEmail"
         Me.lbErrEmail.Size = New System.Drawing.Size(100, 23)
         Me.lbErrEmail.TabIndex = 5
@@ -578,7 +591,7 @@ Partial Class frmSetting
         '
         'lbRecipient
         '
-        Me.lbRecipient.Location = New System.Drawing.Point(9, 159)
+        Me.lbRecipient.Location = New System.Drawing.Point(10, 159)
         Me.lbRecipient.Name = "lbRecipient"
         Me.lbRecipient.Size = New System.Drawing.Size(100, 23)
         Me.lbRecipient.TabIndex = 17
@@ -586,7 +599,7 @@ Partial Class frmSetting
         '
         'lbErrPassword
         '
-        Me.lbErrPassword.Location = New System.Drawing.Point(9, 39)
+        Me.lbErrPassword.Location = New System.Drawing.Point(10, 39)
         Me.lbErrPassword.Name = "lbErrPassword"
         Me.lbErrPassword.Size = New System.Drawing.Size(100, 23)
         Me.lbErrPassword.TabIndex = 6
@@ -594,28 +607,28 @@ Partial Class frmSetting
         '
         'ceErrUseSSL
         '
-        Me.ceErrUseSSL.Location = New System.Drawing.Point(115, 96)
+        Me.ceErrUseSSL.Location = New System.Drawing.Point(136, 96)
         Me.ceErrUseSSL.Name = "ceErrUseSSL"
         Me.ceErrUseSSL.Size = New System.Drawing.Size(83, 24)
         Me.ceErrUseSSL.TabIndex = 13
         '
         'txtErrEmail
         '
-        Me.txtErrEmail.Location = New System.Drawing.Point(115, 6)
+        Me.txtErrEmail.Location = New System.Drawing.Point(136, 6)
         Me.txtErrEmail.Name = "txtErrEmail"
         Me.txtErrEmail.Size = New System.Drawing.Size(200, 24)
         Me.txtErrEmail.TabIndex = 7
         '
         'txtErrPort
         '
-        Me.txtErrPort.Location = New System.Drawing.Point(115, 126)
+        Me.txtErrPort.Location = New System.Drawing.Point(136, 126)
         Me.txtErrPort.Name = "txtErrPort"
         Me.txtErrPort.Size = New System.Drawing.Size(200, 24)
         Me.txtErrPort.TabIndex = 14
         '
         'txtErrPassword
         '
-        Me.txtErrPassword.Location = New System.Drawing.Point(115, 36)
+        Me.txtErrPassword.Location = New System.Drawing.Point(136, 36)
         Me.txtErrPassword.Name = "txtErrPassword"
         Me.txtErrPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtErrPassword.Size = New System.Drawing.Size(200, 24)
@@ -623,14 +636,14 @@ Partial Class frmSetting
         '
         'txtErrHost
         '
-        Me.txtErrHost.Location = New System.Drawing.Point(115, 66)
+        Me.txtErrHost.Location = New System.Drawing.Point(136, 66)
         Me.txtErrHost.Name = "txtErrHost"
         Me.txtErrHost.Size = New System.Drawing.Size(200, 24)
         Me.txtErrHost.TabIndex = 12
         '
         'lbErrHost
         '
-        Me.lbErrHost.Location = New System.Drawing.Point(9, 69)
+        Me.lbErrHost.Location = New System.Drawing.Point(10, 69)
         Me.lbErrHost.Name = "lbErrHost"
         Me.lbErrHost.Size = New System.Drawing.Size(100, 23)
         Me.lbErrHost.TabIndex = 9
@@ -638,7 +651,7 @@ Partial Class frmSetting
         '
         'lbErrPort
         '
-        Me.lbErrPort.Location = New System.Drawing.Point(9, 129)
+        Me.lbErrPort.Location = New System.Drawing.Point(10, 129)
         Me.lbErrPort.Name = "lbErrPort"
         Me.lbErrPort.Size = New System.Drawing.Size(100, 23)
         Me.lbErrPort.TabIndex = 11
@@ -646,7 +659,7 @@ Partial Class frmSetting
         '
         'lbErrUseSSL
         '
-        Me.lbErrUseSSL.Location = New System.Drawing.Point(9, 98)
+        Me.lbErrUseSSL.Location = New System.Drawing.Point(10, 98)
         Me.lbErrUseSSL.Name = "lbErrUseSSL"
         Me.lbErrUseSSL.Size = New System.Drawing.Size(100, 23)
         Me.lbErrUseSSL.TabIndex = 10
@@ -882,4 +895,5 @@ Partial Class frmSetting
     Friend WithEvents lbAutoRestartInterval As System.Windows.Forms.Label
     Friend WithEvents txtAutoRestartInterval As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents cbNgrokUseSSL As CheckBox
 End Class

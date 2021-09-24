@@ -29,6 +29,12 @@ Public Class NgrokWrapper
     Property Region As Regions = Regions.ap
 
     ''' <summary>
+    ''' Enable HTTPS.
+    ''' </summary>
+    ''' <returns></returns>
+    Property UseTLS As Boolean = False
+
+    ''' <summary>
     ''' Local Ngrok IP address. Default is 4040.
     ''' </summary>
     Property NgrokPort As Integer = 4040
@@ -78,7 +84,8 @@ Public Class NgrokWrapper
         config.tunnels.Add(New Config.ConfigTunnel With {.Name = "default",
                                                          .Addr = String.Format("{0}:{1}", IP, Port),
                                                          .Host_Header = "rewrite",
-                                                         .Subdomain = Subdomain})
+                                                         .Subdomain = Subdomain,
+                                                         .Bind_TLS = UseTLS})
 
         'delete ngrok.log file if size is over 5 mb
         If System.IO.File.Exists(config.log) Then

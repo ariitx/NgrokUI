@@ -83,7 +83,7 @@ Public Class NgrokWrapper
 
         config.tunnels.Add(New Config.ConfigTunnel With {.Name = "default",
                                                          .Addr = String.Format("{0}:{1}", IP, Port),
-                                                         .Host_Header = "rewrite",
+                                                         .Host_Header = "preserve",
                                                          .Subdomain = Subdomain,
                                                          .Bind_TLS = UseTLS})
 
